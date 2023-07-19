@@ -44,7 +44,7 @@ class Server:
         if len(self.sockets) > 2:
             for _socket in self.sockets:
                 if _socket is not self.server_socket and _socket is not client:
-                    message = f"{Fore.GREEN} Connected - ".encode() + name + Style.RESET_ALL.encode()
+                    message = f" {Fore.GREEN} Connected - ".encode() + name + Style.RESET_ALL.encode()
                     _socket.send(message)
         # If the first user connects
         else:
